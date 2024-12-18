@@ -1,4 +1,4 @@
-import { Entity } from "./entitie";
+import { Entity } from "./entity";
 import { ValueObject } from "./valueobject";
 import { DomainEvent } from './domainevent';
 
