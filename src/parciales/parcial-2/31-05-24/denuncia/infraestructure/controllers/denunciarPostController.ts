@@ -12,6 +12,12 @@ export class DenunciarPostController{
     }
 
     denunciar(dto: DenunciaPostInfraestructureEntryDTO): Either<Error, DenunciaPostResponseDTO>{
+        
+        //Composition Root
+
+        
+
+        //Creacion del servicio + decoradores
         try {
             const entryDTO = {
                 idDenunciante: dto.idDenunciante,
@@ -19,9 +25,7 @@ export class DenunciarPostController{
                 category: dto.category,
                 texto: dto.texto,
             };
-
             const denunciaService = this.denunciaPostUseCase.execute(entryDTO);
-
             return denunciaService;
         } catch (error) {
             return Either.makeLeft<Error, DenunciaPostResponseDTO>(
