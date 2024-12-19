@@ -18,7 +18,10 @@ export class SecurityServiceDecorator<TService, RService> implements IService<TS
     }
 
     private hasPermission(s: TService): boolean {
-        // Lógica de validación de permisos
-        return true; 
+        //if ('userRole' in s) {
+            //const userRole = (s as any).userRole;
+            //return userRole === 'ADMIN' || userRole === 'MODERATOR';
+        //}
+        return false;
     }
 }
